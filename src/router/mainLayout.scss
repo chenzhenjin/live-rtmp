@@ -1,0 +1,39 @@
+$light-black-color:  #b7c9c7;
+$deep-black-color: #3b3a3a;
+$warning-color: #e76464;
+$primary-color: #59a1fa;
+a{
+  color: $deep-black-color;
+  &:hover,&:active{
+    color: $deep-black-color;
+  }
+}
+.main{
+  color: $warning-color;
+  .tabbar{
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid $light-black-color;
+    height: 50px;
+    width: 100%;
+    .tabbar-flex{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      .tabbar-link{
+        flex: 1;
+        text-align: center;
+        color: $deep-black-color;
+        .iconfont{
+          font-size: 18px;
+          display: block;
+        }
+        &.active a,  &.active i{
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}

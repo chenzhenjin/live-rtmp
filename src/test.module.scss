@@ -1,0 +1,9 @@
+  .test1 {
+    color: #7013f3;
+    &.color{
+      color: #13f36c;
+      .span{
+        color: #f1bf07;
+      }
+    }
+  }
