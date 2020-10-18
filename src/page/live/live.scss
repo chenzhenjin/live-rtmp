@@ -1,7 +1,71 @@
+$deep-black-color: #3b3a3a;
+$deep-warning-color: #ec0303;
+.live-main{
+  position: relative;
+  margin-bottom: 70px;
+}
+.live-top{
+  marquee{
+    font-size: 20px;
+    color: $deep-warning-color;
+  }
+}
+.live-top-p{
+  text-align: center;
+}
 .live{
   width: 100vw;
   height: 50vh;
   position: relative;
+  // 全屏和旋转
+  &.live-full{
+    width: 100%; //注意这里是横屏，width不同竖屏50vh，而是继承之前的，height是变成竖屏的宽度  
+    height: 100vw;
+    position: absolute;
+    top: 0;
+    // border: 5px solid red;
+    // top: 0;
+    // left: 0;
+    z-index: 98;
+    transform: rotate(90deg);
+  }
+  .live-rorate{
+    position: relative;
+    width: 180%;
+    height: 100%;
+  }
+  // 
+  .video-contorl{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    .video-play{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      i{
+        color: white;
+        font-size: 60px;
+      }
+    }
+    .video-flexible--div{
+      position: absolute;
+      display: inline-flex;
+      // background-color: $deep-black-color;
+      // opacity: 0.7;
+      right: 15px;
+      bottom: 0;
+      z-index: 101;
+      i{
+        color: white;
+        font-size: 45px;
+      }
+    }
+  }
   .live-video{
     background-color: black;
     position: absolute;
@@ -9,5 +73,34 @@
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 99;
   }
+}
+.waiting-tips{
+  margin-top: 30px;
+  color: $deep-warning-color;
+}
+.photos-tips{
+  font-size: 30px;
+  color: $deep-warning-color;
+  text-align: center;
+}
+.live-photos{
+  text-align: center;
+  span{
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: $deep-black-color;
+    color: white;
+    margin-bottom: 5px;
+  }
+  img{
+    margin: 0 auto;
+    width: auto;
+    height: 30vh;
+  }
+}
+.ant-carousel .slick-dots li button {
+  height: 10px;
 }

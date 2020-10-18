@@ -31,11 +31,11 @@ export default class MainLayout extends React.Component {
           <div className={this.state.tabbarActive === 'state' ?
             'tabbar-link active' : 'tabbar-link'}>
             <i className="iconfont icondongtaigonggao"></i>
-            <Link to="/state"
+            {/* <Link to="/state"
               onClick={() => { this.changeActive('state') }}
-            >
-              最新动态
-          </Link>
+            > */}
+            <span>最新动态(未开发)</span>
+          {/* </Link> */}
           </div>
         </div>
       </div>

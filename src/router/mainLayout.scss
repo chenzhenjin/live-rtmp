@@ -9,11 +9,10 @@ a{
   }
 }
 .main{
-  color: $warning-color;
   .tabbar{
     position: fixed;
     bottom: 0;
-    border-top: 1px solid $light-black-color;
+    background-color: $light-black-color;
     height: 50px;
     width: 100%;
     .tabbar-flex{
