@@ -6,36 +6,36 @@ export default class MainLayout extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      tabbarActive: 'live'
+      tabbarActive: 'home'
     }
   }
   render() {
     return <div className="main">
       <Switch>
-        <Route path="/" exact render={() => <Redirect to="/live" />}></Route>
-        <Route path="/live" component={LazyLoad(() => import('@/page/live/live.jsx'))}></Route>
+        <Route path="/" exact render={() => <Redirect to="/home" />}></Route>
+        <Route path="/home" component={LazyLoad(() => import('@/page/home/home.jsx'))}></Route>
         <Route path="/state" component={LazyLoad(() => import('@/page/state/state.jsx'))}></Route>
-        <Route render={() => <Redirect to="/live" />}></Route>
+        <Route render={() => <Redirect to="/home" />}></Route>
       </Switch>
       <div className="tabbar">
         <div className="tabbar-flex">
-          <div className={this.state.tabbarActive === 'live' ?
+          <div className={this.state.tabbarActive === 'home' ?
             'tabbar-link active' : 'tabbar-link'}>
             <i className="iconfont iconzhiboguanli"></i>
-            <Link to="/live"
-              onClick={() => { this.changeActive('live') }}
+            <Link to="/home"
+              onClick={() => { this.changeActive('home') }}
             >
-              现场直播
+              现场直播中
           </Link>
           </div>
           <div className={this.state.tabbarActive === 'state' ?
             'tabbar-link active' : 'tabbar-link'}>
             <i className="iconfont icondongtaigonggao"></i>
-            {/* <Link to="/state"
+            <Link to="/state"
               onClick={() => { this.changeActive('state') }}
-            > */}
-            <span>最新动态(未开发)</span>
-          {/* </Link> */}
+            >
+              <span>最新动态(未开发)</span>
+            </Link>
           </div>
         </div>
       </div>

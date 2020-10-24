@@ -1,5 +1,5 @@
 import React from 'react'
-import './live.scss'
+import './home.scss'
 import { Carousel, Spin } from 'antd';
 import img1 from '../../assets/img/1.jpg'
 import img2 from '../../assets/img/2.jpg'
