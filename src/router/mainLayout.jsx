@@ -25,7 +25,7 @@ export default class MainLayout extends React.Component {
             <Link to="/home"
               onClick={() => { this.changeActive('home') }}
             >
-              现场直播正式开始
+              现场直播钉钉
           </Link>
           </div>
           <div className={this.state.tabbarActive === 'state' ?
