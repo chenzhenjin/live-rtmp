@@ -653,7 +653,7 @@ module.exports = function (webpackEnv) {
         formatter: isEnvProduction ? typescriptFormatter : undefined,
       }),
       new SentryWebpackPlugin({
-        release: "v1.0.1",
+        release: "v1.0.2",
         include: '/build',
         ignore: ["node_modules"],
         urlPrefix: "~/live/"
