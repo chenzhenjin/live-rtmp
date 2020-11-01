@@ -42,6 +42,7 @@ export default class MainLayout extends React.Component {
     </div>
   }
   changeActive(value) {
+    console.log('changeActive', window.a.b)
     this.setState({
       tabbarActive: value
     })
