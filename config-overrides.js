@@ -2,7 +2,6 @@ const {
   override,
   addWebpackPlugin
 } = require("customize-cra")
-
 const SentryCliPlugin = require('@sentry/webpack-plugin');
 
 module.exports = override(

@@ -2,6 +2,6 @@
 token=b8b7c179caa344ce9116deef4ba66e985102fd8dcd90477fa1ded7044ca602f3
 
 [defaults]
-project=react
 url=http://120.48.19.90:9000/
 org=brotherstudy
+project=react
