@@ -1,0 +1,2 @@
+(this["webpackJsonpmarry-live"]=this["webpackJsonpmarry-live"]||[]).push([[5],{89:function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return l}));var r=n(9),a=n(10),c=n(12),u=n(11),i=n(0),s=n.n(i),l=function(t){Object(c.a)(n,t);var e=Object(u.a)(n);function n(t){var a;return Object(r.a)(this,n),(a=e.call(this,t)).state={},a}return Object(a.a)(n,[{key:"render",value:function(){return s.a.createElement("div",null,"\u6700\u65b0\u52a8\u6001")}}]),n}(s.a.Component)}}]);
+//# sourceMappingURL=5.56f6aef3.chunk.js.map
