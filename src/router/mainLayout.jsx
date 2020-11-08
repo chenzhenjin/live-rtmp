@@ -34,7 +34,7 @@ export default class MainLayout extends React.Component {
             <Link to="/state"
               onClick={() => { this.changeActive('state') }}
             >
-              <span>最新动态(未开发版本号)</span>
+              <span>最新动态(未开发 版本号)</span>
             </Link>
           </div>
         </div>
