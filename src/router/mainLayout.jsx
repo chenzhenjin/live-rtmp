@@ -25,7 +25,11 @@ export default class MainLayout extends React.Component {
             <Link to="/home"
               onClick={() => { this.changeActive('home') }}
             >
+<<<<<<< HEAD
               现场直播
+=======
+              现场直播测试
+>>>>>>> release/201024-v1.0.0
           </Link>
           </div>
           <div className={this.state.tabbarActive === 'state' ?
@@ -34,7 +38,7 @@ export default class MainLayout extends React.Component {
             <Link to="/state"
               onClick={() => { this.changeActive('state') }}
             >
-              <span>最新动态(未开发)</span>
+              <span>最新动态(未开发版本号)</span>
             </Link>
           </div>
         </div>
@@ -42,6 +46,7 @@ export default class MainLayout extends React.Component {
     </div>
   }
   changeActive(value) {
+    console.log('changeActive 123456', window.a.b)
     this.setState({
       tabbarActive: value
     })
