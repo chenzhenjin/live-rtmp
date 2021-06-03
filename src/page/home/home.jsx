@@ -1,17 +1,14 @@
 import React from 'react'
+import { When, Case } from './jugement.jsx'
 import './home.scss'
+import testModule from './test.module.scss'
 import { Carousel, Spin } from 'antd';
-import img1 from '../../assets/img/1.jpg'
-import img2 from '../../assets/img/2.jpg'
-import img3 from '../../assets/img/3.jpg'
-import img4 from '../../assets/img/4.jpg'
-import img5 from '../../assets/img/5.jpg'
-import img6 from '../../assets/img/6.jpg'
 let Hls = require('hls.js')
 
 export default class Live extends React.Component {
   constructor(props) {
     super(props)
+    console.log('testModule', testModule)
     this.state = {
       testUrl: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
       liveUrl: 'http://47.100.199.95:8080/hls/app.m3u8',
@@ -19,13 +16,15 @@ export default class Live extends React.Component {
       fullScreen: false,
       showPlayIcon: false,
       imgList: [
-        img1, img2,
-        img3, img4,
-        img5, img6
-        // '../../assets/img/1.jpg', '@/assets/img/1.jpg', '@/assets/img/1.jpg',
-        // '@/assets/img/4.jpg','@/assets/img/5.jpg','@/assets/img/6.jpg',
+        require('@/assets/img/1.jpg'),
+        require('@/assets/img/2.jpg'),
+        require('@/assets/img/3.jpg'),
+        require('@/assets/img/4.jpg'),
+        require('@/assets/img/5.jpg'),
+        require('@/assets/img/6.jpg'),
       ],
-      loading: true
+      loading: true,
+      testBol: true
     }
     this.videoRef = React.createRef()
   }
@@ -78,13 +77,26 @@ export default class Live extends React.Component {
       fullScreen: !this.state.fullScreen
     })
   }
+  caseClick(val) {
+    console.log('receive', val)
+  }
   render() {
     return <div className="live-main">
-      <div className="live-top">
+      {/* <div className="live-top">
         <marquee>欢迎各位来到陈振龙--许思敏喜事现场，正在为您实时直播中</marquee>
         <Spin spinning={this.state.loading} >
           <p className="live-top-p">{this.state.loading ? '直播连接中' : '观看中'}</p>
         </Spin>
+      </div> */}
+      <div>
+        {
+          this.state.testBol ? <span>测试区域</span> : <span>不要测试区域</span>
+        }
+        <When>
+          <Case if={this.state.testBol} click={(val) => this.caseClick(val)}>插槽1</Case>
+          <Case elseif={!this.state.testBol} click={(val) => this.caseClick(val)}>插槽2</Case>
+          <Case else click={(val) => this.caseClick(val)}>插槽3</Case>
+        </When>
       </div>
       <div className={this.state.fullScreen ? 'live live-full' : 'live'}>
         <div className={this.state.fullScreen ? 'live-rorate' : ''}>
@@ -114,7 +126,7 @@ export default class Live extends React.Component {
         <p>我来爆照，前方高能，请上拉</p>
         <p>哈哈哈</p>
       </div>
-      <div className="live-photos">
+      <div className={'live-photos ' + testModule.red}>
         <span>点击白色的按钮，可切换图片</span>
         <Carousel autoplay>
           {

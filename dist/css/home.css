@@ -1,0 +1,116 @@
+.live-main {
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.live-top marquee {
+  font-size: 20px;
+  color: #ec0303;
+}
+
+.live-top-p {
+  text-align: center;
+}
+
+.live {
+  width: 100vw;
+  height: 50vh;
+  position: relative;
+}
+
+.live.live-full {
+  width: 100%;
+  height: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: 98;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.live .live-rorate {
+  position: relative;
+  width: 180%;
+  height: 100%;
+}
+
+.live .video-contorl {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.live .video-contorl .video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.live .video-contorl .video-play i {
+  color: white;
+  font-size: 60px;
+}
+
+.live .video-contorl .video-flexible--div {
+  position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  right: 15px;
+  bottom: 0;
+  z-index: 101;
+}
+
+.live .video-contorl .video-flexible--div i {
+  color: white;
+  font-size: 45px;
+}
+
+.live .live-video {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+.waiting-tips {
+  margin-top: 30px;
+  color: #ec0303;
+}
+
+.photos-tips {
+  font-size: 30px;
+  color: #ec0303;
+  text-align: center;
+}
+
+.live-photos {
+  text-align: center;
+}
+
+.live-photos span {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #3b3a3a;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.live-photos img {
+  margin: 0 auto;
+  width: auto;
+  height: 30vh;
+}
+
+.ant-carousel .slick-dots li button {
+  height: 10px;
+}
